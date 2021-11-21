@@ -1,0 +1,274 @@
+---
+title: "Factors that possibly influence suicide"
+author: "Sarah Akinkunmi"
+date: "11/20/2021"
+output: html_document
+---
+
+## My analysis on factors that influence suicide dataset in Austria, Brazil, Denmark, Japan, Norway, Russia Federation, South Africa and the United States of America. This data was taken from Kaggle. 
+
+First, I'll load the csv file:
+
+```{r cars}
+library(tidyverse)
+file <- read_csv("C:/Sarah's Semicolon files/data-science/project-1/master.csv")
+file <- rename(file, `suicide (%)` = `suicides/100k pop`)
+```
+
+### Then, I'll extract each country into it's own dataframe:
+
+For Austria:
+
+```{r}
+au_df <- file%>%.[1787:2168, ]
+```
+
+### For Brazil:
+
+```{r}
+br_df <- file%>%.[4173:4544, ]
+```
+
+### For Denmark:
+
+```{r}
+denmark_df <- file%>%.[7419:7682, ]
+```
+
+### For Japan:
+
+```{r}
+jp_df <- file%>%.[13365:13736, ]
+```
+
+### For Norway:
+
+```{r}
+nw_df <- file%>%.[17869:18228, ]
+```
+
+### For the Russia Federation:
+
+```{r}
+rs_df <- file%>%.[20937:21258, ]
+```
+
+### For South Africa:
+
+```{r}
+sa_df <- file%>%.[23289:23528, ]
+```
+
+### For United States of America:
+
+```{r}
+us_df <- file%>%.[26849:27220, ]
+```
+
+
+### Next, I'll perform a chi-square test between the age and generation variables in all the countries.
+
+Null hypothesis (h0): There is no relationship between age and generation
+Alternative hypothesis (hA): The two variables are dependent on each other
+
+
+For Austria:
+```{r}
+chisq.test(au_df$age, au_df$generation)
+```
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+## For Brazil:
+
+```{r}
+chisq.test(br_df$age, br_df$generation)
+```
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+## For Denmark:
+
+```{r}
+chisq.test(denmark_df$age, denmark_df$generation)
+```
+
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+## For Japan:
+
+```{r}
+chisq.test(jp_df$age, jp_df$generation)
+```
+
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+## For Norway:
+
+```{r}
+chisq.test(nw_df$age, nw_df$generation)
+```
+
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+## For Russia:
+
+```{r}
+chisq.test(rs_df$age, rs_df$generation)
+```
+
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+## For South Africa:
+
+```{r}
+chisq.test(sa_df$age, sa_df$generation)
+```
+
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+## For United States of America: 
+
+```{r}
+chisq.test(us_df$age, us_df$generation)
+```
+
+### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+
+
+### Our chi-square analysis of age and generation are the same in all countries, so it's safe to conclude that we can use either variable but not both for other analysis
+
+```{r}
+
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
