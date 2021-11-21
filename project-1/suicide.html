@@ -172,8 +172,8 @@ pre code {
 </div>
 
 
-<div id="my-analysis-on-factors-that-influence-suicide-dataset-in-austria-brazil-denmark-japan-norway-russia-federation-south-africa-and-the-united-states-of-america.-this-data-was-taken-from-kaggle." class="section level2">
-<h2>My analysis on factors that influence suicide dataset in Austria, Brazil, Denmark, Japan, Norway, Russia Federation, South Africa and the United States of America. This data was taken from Kaggle.</h2>
+<div id="my-analysis-on-factors-that-influence-suicide-dataset-in-austria-brazil-denmark-japan-norway-russian-federation-south-africa-and-the-united-states.-this-data-was-taken-from-kaggle." class="section level3">
+<h3>My analysis on factors that influence suicide dataset in Austria, Brazil, Denmark, Japan, Norway, Russian Federation, South Africa and the United States. This data was taken from Kaggle.</h3>
 <p>First, I’ll load the csv file:</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
@@ -194,6 +194,7 @@ pre code {
 ## i Use `spec()` to retrieve the full column specification for this data.
 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>file &lt;- rename(file, `suicide (%)` = `suicides/100k pop`)</code></pre>
+</div>
 <div id="then-ill-extract-each-country-into-its-own-dataframe" class="section level3">
 <h3>Then, I’ll extract each country into it’s own dataframe:</h3>
 <p>For Austria:</p>
@@ -206,17 +207,17 @@ pre code {
 <pre class="r"><code>jp_df &lt;- file%&gt;%.[13365:13736, ]</code></pre>
 <p>For Norway:</p>
 <pre class="r"><code>nw_df &lt;- file%&gt;%.[17869:18228, ]</code></pre>
-<p>For the Russia Federation:</p>
+<p>For the Russian Federation:</p>
 <pre class="r"><code>rs_df &lt;- file%&gt;%.[20937:21258, ]</code></pre>
 <p>For South Africa:</p>
 <pre class="r"><code>sa_df &lt;- file%&gt;%.[23289:23528, ]</code></pre>
-<p>For United States of America:</p>
+<p>For United States:</p>
 <pre class="r"><code>us_df &lt;- file%&gt;%.[26849:27220, ]</code></pre>
 </div>
 <div id="next-ill-perform-a-chi-square-test-between-the-age-and-generation-variables-in-all-the-countries." class="section level3">
 <h3>Next, I’ll perform a chi-square test between the age and generation variables in all the countries.</h3>
-<p>Null hypothesis (h<sup>0</sup>): There is no relationship between age and generation<br />
-Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each other</p>
+<p>Null hypothesis (h<sub>0</sub>): There is no relationship between age and generation<br />
+Alternative hypothesis (h<sub>a</sub>): The two variables are dependent on each other</p>
 <p>For Austria:</p>
 <pre class="r"><code>chisq.test(au_df$age, au_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(au_df$age, au_df$generation): Chi-squared approximation
@@ -226,13 +227,8 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  au_df$age and au_df$generation
 ## X-squared = 586.97, df = 25, p-value &lt; 2.2e-16</code></pre>
-</div>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-</div>
-<div id="for-brazil" class="section level2">
-<h2>For Brazil:</h2>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>For Brazil:</p>
 <pre class="r"><code>chisq.test(br_df$age, br_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(br_df$age, br_df$generation): Chi-squared approximation
 ## may be incorrect</code></pre>
@@ -241,12 +237,8 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  br_df$age and br_df$generation
 ## X-squared = 588.2, df = 25, p-value &lt; 2.2e-16</code></pre>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-1" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-</div>
-<div id="for-denmark" class="section level2">
-<h2>For Denmark:</h2>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>For Denmark:</p>
 <pre class="r"><code>chisq.test(denmark_df$age, denmark_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(denmark_df$age, denmark_df$generation): Chi-squared
 ## approximation may be incorrect</code></pre>
@@ -255,12 +247,8 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  denmark_df$age and denmark_df$generation
 ## X-squared = 568.04, df = 25, p-value &lt; 2.2e-16</code></pre>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-2" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-</div>
-<div id="for-japan" class="section level2">
-<h2>For Japan:</h2>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>For Japan:</p>
 <pre class="r"><code>chisq.test(jp_df$age, jp_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(jp_df$age, jp_df$generation): Chi-squared approximation
 ## may be incorrect</code></pre>
@@ -269,12 +257,8 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  jp_df$age and jp_df$generation
 ## X-squared = 588.2, df = 25, p-value &lt; 2.2e-16</code></pre>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-3" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-</div>
-<div id="for-norway" class="section level2">
-<h2>For Norway:</h2>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>For Norway:</p>
 <pre class="r"><code>chisq.test(nw_df$age, nw_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(nw_df$age, nw_df$generation): Chi-squared approximation
 ## may be incorrect</code></pre>
@@ -283,12 +267,8 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  nw_df$age and nw_df$generation
 ## X-squared = 586.34, df = 25, p-value &lt; 2.2e-16</code></pre>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-4" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-</div>
-<div id="for-russia" class="section level2">
-<h2>For Russia:</h2>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>For the Russian Federation:</p>
 <pre class="r"><code>chisq.test(rs_df$age, rs_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(rs_df$age, rs_df$generation): Chi-squared approximation
 ## may be incorrect</code></pre>
@@ -297,12 +277,8 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  rs_df$age and rs_df$generation
 ## X-squared = 590.35, df = 25, p-value &lt; 2.2e-16</code></pre>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-5" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-</div>
-<div id="for-south-africa" class="section level2">
-<h2>For South Africa:</h2>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>For South Africa:</p>
 <pre class="r"><code>chisq.test(sa_df$age, sa_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(sa_df$age, sa_df$generation): Chi-squared approximation
 ## may be incorrect</code></pre>
@@ -311,12 +287,8 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  sa_df$age and sa_df$generation
 ## X-squared = 523.19, df = 25, p-value &lt; 2.2e-16</code></pre>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-6" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-</div>
-<div id="for-united-states-of-america" class="section level2">
-<h2>For United States of America:</h2>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>For United States:</p>
 <pre class="r"><code>chisq.test(us_df$age, us_df$generation)</code></pre>
 <pre><code>## Warning in chisq.test(us_df$age, us_df$generation): Chi-squared approximation
 ## may be incorrect</code></pre>
@@ -325,20 +297,14 @@ Alternative hypothesis (h<sup>a</sup>): The two variables are dependent on each 
 ## 
 ## data:  us_df$age and us_df$generation
 ## X-squared = 588.2, df = 25, p-value &lt; 2.2e-16</code></pre>
-<div id="since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-7" class="section level3">
-<h3>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</h3>
-</div>
-<div id="our-chi-square-analysis-of-age-and-generation-are-the-same-in-all-countries-so-its-safe-to-conclude-that-we-can-use-either-variable-but-not-both-for-other-analysis" class="section level3">
-<h3>Our chi-square analysis of age and generation are the same in all countries, so it’s safe to conclude that we can use either variable but not both for other analysis</h3>
+<p>Since the p-value is less than 0.05 (2.2e<sup>-16</sup>), we will reject the null hypothesis. We can conclude that the age and generation depend on each other</p>
+<p>Our chi-square analysis of age and generation are the same in all countries, so it’s safe to conclude that we can use either variable but not both for other analysis</p>
 </div>
 <div id="next-ill-perform-a-chi-square-test-between-the-age-and-sex-variables-in-all-the-countries." class="section level3">
 <h3>Next, I’ll perform a chi-square test between the age and sex variables in all the countries.</h3>
-<p>Null hypothesis (h<sup>0</sup>): There is no relationship between age and generation<br />
-Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each other</p>
-</div>
-</div>
-<div id="for-austria" class="section level2">
-<h2>For Austria:</h2>
+<p>Null hypothesis (h<sub>0</sub>): There is no relationship between age and generation<br />
+Alternative hypothesis (h<sub>a</sub>): The two variables are dependent on each other</p>
+<p>For Austria:</p>
 <pre class="r"><code>chisq.test(au_df$age, au_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -346,9 +312,7 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 ## data:  au_df$age and au_df$sex
 ## X-squared = 0, df = 5, p-value = 1</code></pre>
 <p>Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent</p>
-</div>
-<div id="for-brazil-1" class="section level2">
-<h2>For Brazil:</h2>
+<p>For Brazil:</p>
 <pre class="r"><code>chisq.test(br_df$age, br_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -356,9 +320,7 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 ## data:  br_df$age and br_df$sex
 ## X-squared = 0, df = 5, p-value = 1</code></pre>
 <p>Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent</p>
-</div>
-<div id="for-denmark-1" class="section level2">
-<h2>For Denmark:</h2>
+<p>For Denmark:</p>
 <pre class="r"><code>chisq.test(denmark_df$age, denmark_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -366,9 +328,7 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 ## data:  denmark_df$age and denmark_df$sex
 ## X-squared = 0, df = 5, p-value = 1</code></pre>
 <p>Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent</p>
-</div>
-<div id="for-japan-1" class="section level2">
-<h2>For Japan:</h2>
+<p>For Japan:</p>
 <pre class="r"><code>chisq.test(jp_df$age, jp_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -376,9 +336,7 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 ## data:  jp_df$age and jp_df$sex
 ## X-squared = 0, df = 5, p-value = 1</code></pre>
 <p>Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent</p>
-</div>
-<div id="for-norway-1" class="section level2">
-<h2>For Norway:</h2>
+<p>For Norway:</p>
 <pre class="r"><code>chisq.test(nw_df$age, nw_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -386,9 +344,7 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 ## data:  nw_df$age and nw_df$sex
 ## X-squared = 0, df = 5, p-value = 1</code></pre>
 <p>Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent</p>
-</div>
-<div id="for-russia-1" class="section level2">
-<h2>For Russia:</h2>
+<p>For the Russian Federation:</p>
 <pre class="r"><code>chisq.test(rs_df$age, rs_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -396,9 +352,7 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 ## data:  rs_df$age and rs_df$sex
 ## X-squared = 0, df = 5, p-value = 1</code></pre>
 <p>Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent</p>
-</div>
-<div id="for-south-africa-1" class="section level2">
-<h2>For South Africa:</h2>
+<p>For South Africa:</p>
 <pre class="r"><code>chisq.test(sa_df$age, sa_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -406,9 +360,7 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 ## data:  sa_df$age and sa_df$sex
 ## X-squared = 0, df = 5, p-value = 1</code></pre>
 <p>Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent</p>
-</div>
-<div id="for-united-states-of-america-1" class="section level2">
-<h2>For United States of America:</h2>
+<p>For United States:</p>
 <pre class="r"><code>chisq.test(us_df$age, us_df$sex)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test
@@ -420,7 +372,11 @@ Alternative hypothesis (h<sup>A</sup>): The two variables are dependent on each 
 </div>
 <div id="anova-tests" class="section level1">
 <h1>ANOVA tests</h1>
-<p>One-way ANOVA tests between Suicide % and age For Austria:</p>
+<p>One-way ANOVA tests between suicide percentage and age, and the suicide percentage and sex</p>
+<p>Null hypothesis (h<sub>0</sub>): There is no difference between the group means of the independent and residual variables<br />
+Alternative hypothesis (h<sub>a</sub>): The is a difference in group means</p>
+<p>For Austria:</p>
+<p>Suicide (%) and Age</p>
 <pre class="r"><code>one_way_au &lt;- aov(`suicide (%)`~ age, data = au_df)
 summary(one_way_au)</code></pre>
 <pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
@@ -428,9 +384,258 @@ summary(one_way_au)</code></pre>
 ## Residuals   376 142524     379                   
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
-<p>The model summary first lists the independent variables being tested in the model (in this case we have only one, ‘fertilizer’) and the model residuals (‘Residual’). All of the variation that is not explained by the independent variables is called residual variance.</p>
-<p>The rest of the values in the output table describe the independent variable and the residuals:</p>
-<p>The Df column displays the degrees of freedom for the independent variable (the number of levels in the variable minus 1), and the degrees of freedom for the residuals (the total number of observations minus one and minus the number of levels in the independent variables). The Sum Sq column displays the sum of squares (a.k.a. the total variation between the group means and the overall mean). The Mean Sq column is the mean of the sum of squares, calculated by dividing the sum of squares by the degrees of freedom for each parameter. The F-value column is the test statistic from the F test. This is the mean square of each independent variable divided by the mean square of the residuals. The larger the F value, the more likely it is that the variation caused by the independent variable is real and not due to chance. The Pr(&gt;F) column is the p-value of the F-statistic. This shows how likely it is that the F-value calculated from the test would have occurred if the null hypothesis of no difference among group means were true. The p-value of the fertilizer variable is low (p &lt; 0.001), so it appears that the type of fertilizer used has a real impact on the final crop yield.</p>
+<p>Independent variables being tested in the model (‘age’) and the model residuals (‘Residuals’).</p>
+<p>The Df column displays the degrees of freedom<br />
+For the independent variable, Df = 5<br />
+For the residuals, Df = 376</p>
+<p>The F-value column is the test statistic from the F test. This is the mean square of each independent variable divided by the mean square of the residuals. The larger the F value, the more likely it is that the variation caused by the independent variable is real and not due to chance.</p>
+<p>The Pr(&gt;F) column is the p-value of the F-statistic. This shows how likely it is that the F-value calculated from the test would have occurred if the null hypothesis of no difference among group means were true. The p-value of the age variable is low (p &lt; 0.001), so it appears that the age groups have an impact on the suicide percentage of Austria.</p>
+<p>Suicide (%) and Sex</p>
+<pre class="r"><code>one_way_au_1 &lt;- aov(`suicide (%)`~ sex, data = au_df)
+summary(one_way_au_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  68971   68971   127.3 &lt;2e-16 ***
+## Residuals   380 205839     542                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 380</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a significance on the suicide percentage of Austria.</p>
+<p>For Brazil:<br />
+Suicide (%) and Age</p>
+<pre class="r"><code>one_way_br &lt;- aov(`suicide (%)`~ age, data = br_df)
+summary(one_way_br)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## age           5   3874   774.7   36.08 &lt;2e-16 ***
+## Residuals   366   7860    21.5                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 5<br />
+For the residuals, Df = 366</p>
+<p>The p-value of the age variable is low (p &lt; 0.001), so it appears that the age groups have a high significance on the suicide percentage of Brazil.</p>
+<p>Suicide (%) and Sex</p>
+<pre class="r"><code>one_way_br_1 &lt;- aov(`suicide (%)`~ sex, data = br_df)
+summary(one_way_br_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1   5157    5157   290.1 &lt;2e-16 ***
+## Residuals   370   6577      18                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 370</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a high significance on the suicide percentage of Brazil.</p>
+<p>For Denmark:<br />
+Suicide (%) and Age</p>
+<pre class="r"><code>one_way_dm &lt;- aov(`suicide (%)`~ age, data = denmark_df)
+summary(one_way_dm)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## age           5  28295    5659   55.69 &lt;2e-16 ***
+## Residuals   258  26219     102                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 5<br />
+For the residuals, Df = 366</p>
+<p>The p-value of the age variable is low (p &lt; 0.001), so it appears that the age groups have a high significance on the suicide percentage of Denmark.</p>
+<p>Suicide (%) and Sex</p>
+<pre class="r"><code>one_way_dm_1 &lt;- aov(`suicide (%)`~ sex, data = denmark_df)
+summary(one_way_dm_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  12703   12703    79.6 &lt;2e-16 ***
+## Residuals   262  41811     160                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 262</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a high significance on the suicide percentage of Denmark.</p>
+<p>For Japan:<br />
+Suicide (%) and Age</p>
+<pre class="r"><code>one_way_jp &lt;- aov(`suicide (%)`~ age, data = jp_df)
+summary(one_way_jp)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## age           5  68152   13630   107.4 &lt;2e-16 ***
+## Residuals   366  46457     127                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 5<br />
+For the residuals, Df = 366</p>
+<p>The p-value of the age variable is low (p &lt; 0.001), so it appears that the age groups have a high significance on the suicide percentage of Japan.</p>
+<p>Suicide (%) and Sex</p>
+<pre class="r"><code>one_way_jp_1 &lt;- aov(`suicide (%)`~ sex, data = jp_df)
+summary(one_way_jp_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  23102   23102   93.41 &lt;2e-16 ***
+## Residuals   370  91507     247                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 370</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a high significance on the suicide percentage of Japan.</p>
+<p>For Norway:<br />
+Suicide (%) and Age</p>
+<pre class="r"><code>one_way_nw &lt;- aov(`suicide (%)`~ age, data = nw_df)
+summary(one_way_nw)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## age           5  11174  2234.8   36.37 &lt;2e-16 ***
+## Residuals   354  21752    61.4                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 5<br />
+For the residuals, Df = 354</p>
+<p>The p-value of the age variable is low (p &lt; 0.001), so it appears that the age group have a high significance on the suicide percentage of Norway.</p>
+<p>Suicide (%) and Sex</p>
+<pre class="r"><code>one_way_nw_1 &lt;- aov(`suicide (%)`~ sex, data = nw_df)
+summary(one_way_nw_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  14777   14777   291.5 &lt;2e-16 ***
+## Residuals   358  18150      51                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 358</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a high significance on the suicide percentage of Norway.</p>
+<p>For the Russian Federation:<br />
+Suicide (%) and Age</p>
+<pre class="r"><code>one_way_rs &lt;- aov(`suicide (%)`~ age, data = rs_df)
+summary(one_way_rs)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## age           5  95050   19010   23.21 &lt;2e-16 ***
+## Residuals   316 258774     819                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 5<br />
+For the residuals, Df = 316</p>
+<p>The p-value of the age variable is low (p &lt; 0.001), so it appears that the age groups have a high significance on the suicide percentage of the Russian Federation.</p>
+<p>Suicide (%) and Sex</p>
+<pre class="r"><code>one_way_rs_1 &lt;- aov(`suicide (%)`~ sex, data = rs_df)
+summary(one_way_rs_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1 176845  176845   319.8 &lt;2e-16 ***
+## Residuals   320 176978     553                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 320</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a high significance on the suicide percentage of the Russian Federation.</p>
+<p>For South Africa:<br />
+Suicide (%) and Age</p>
+<pre class="r"><code>one_way_sa &lt;- aov(`suicide (%)`~ age, data = sa_df)
+summary(one_way_sa)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## age           5  49.41   9.882   15.29 5.36e-13 ***
+## Residuals   234 151.29   0.647                     
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 5<br />
+For the residuals, Df = 234</p>
+<p>The p-value of the age variable is low (p &lt; 0.001), so it appears that the age groups have a high significance on the suicide percentage of South Africa.</p>
+<p>Suicide(%) and Sex</p>
+<pre class="r"><code>one_way_sa_1 &lt;- aov(`suicide (%)`~ sex, data = sa_df)
+summary(one_way_sa_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  76.29   76.29   145.9 &lt;2e-16 ***
+## Residuals   238 124.42    0.52                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 238</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a high significance on the suicide percentage of South Africa.</p>
+<p>For United States:<br />
+Suicide (%) and Age</p>
+<pre class="r"><code>one_way_us &lt;- aov(`suicide (%)`~ age, data = us_df)
+summary(one_way_us)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## age           5  18907    3781   30.07 &lt;2e-16 ***
+## Residuals   366  46029     126                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 5 For the residuals, Df = 366</p>
+<p>The p-value of the age variable is low (p &lt; 0.001), so it appears that the age groups have a high significance on the suicide percentage of United States.</p>
+<p>Suicide (%) and Sex</p>
+<pre class="r"><code>one_way_us_1 &lt;- aov(`suicide (%)`~ sex, data = us_df)
+summary(one_way_us_1)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  31100   31100   340.1 &lt;2e-16 ***
+## Residuals   370  33836      91                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the independent variable, Df = 1<br />
+For the residuals, Df = 370</p>
+<p>The p-value of the sex variable is low (p &lt; 0.001), so it appears that the sexes have a high significance on the suicide percentage of United States.</p>
+<div id="two-way-anova-tests-with-age-and-sex-as-the-independent-variables" class="section level2">
+<h2>Two-way ANOVA tests with Age and Sex as the independent variables</h2>
+<p>For Austria:</p>
+<pre class="r"><code>two_way_au &lt;- aov(`suicide (%)`~ sex + age, data = au_df)
+summary(two_way_au)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  68971   68971   351.6 &lt;2e-16 ***
+## age           5 132286   26457   134.9 &lt;2e-16 ***
+## Residuals   375  73553     196                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For Brazil:</p>
+<pre class="r"><code>two_way_br &lt;- aov(`suicide (%)`~ sex + age, data = br_df)
+summary(two_way_br)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1   5157    5157   696.3 &lt;2e-16 ***
+## age           5   3874     775   104.6 &lt;2e-16 ***
+## Residuals   365   2703       7                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For Denmark:</p>
+<pre class="r"><code>two_way_dm &lt;- aov(`suicide (%)`~ sex + age, data = denmark_df)
+summary(two_way_dm)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  12703   12703   241.5 &lt;2e-16 ***
+## age           5  28295    5659   107.6 &lt;2e-16 ***
+## Residuals   257  13516      53                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For Japan:</p>
+<pre class="r"><code>two_way_jp &lt;- aov(`suicide (%)`~ sex + age, data = jp_df)
+summary(two_way_jp)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  23102   23102   361.1 &lt;2e-16 ***
+## age           5  68152   13630   213.0 &lt;2e-16 ***
+## Residuals   365  23355      64                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For Norway:</p>
+<pre class="r"><code>two_way_nw &lt;- aov(`suicide (%)`~ sex + age, data = nw_df)
+summary(two_way_nw)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  14777   14777   747.8 &lt;2e-16 ***
+## age           5  11174    2235   113.1 &lt;2e-16 ***
+## Residuals   353   6976      20                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For the Russian Federation:</p>
+<pre class="r"><code>two_way_rs &lt;- aov(`suicide (%)`~ sex + age, data = rs_df)
+summary(two_way_rs)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1 176845  176845  679.94 &lt;2e-16 ***
+## age           5  95050   19010   73.09 &lt;2e-16 ***
+## Residuals   315  81928     260                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For South Africa:</p>
+<pre class="r"><code>two_way_sa &lt;- aov(`suicide (%)`~ sex + age, data = sa_df)
+summary(two_way_sa)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  76.29   76.29   237.0 &lt;2e-16 ***
+## age           5  49.41    9.88    30.7 &lt;2e-16 ***
+## Residuals   233  75.01    0.32                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>For United States:</p>
+<pre class="r"><code>two_way_us &lt;- aov(`suicide (%)`~ sex + age, data = us_df)
+summary(two_way_us)</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## sex           1  31100   31100  760.38 &lt;2e-16 ***
+## age           5  18907    3781   92.45 &lt;2e-16 ***
+## Residuals   365  14929      41                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+</div>
 </div>
 
 
