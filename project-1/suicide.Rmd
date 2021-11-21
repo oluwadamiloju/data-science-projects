@@ -2,10 +2,12 @@
 title: "Factors that possibly influence suicide"
 author: "Sarah Akinkunmi"
 date: "11/20/2021"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
-## My analysis on factors that influence suicide dataset in Austria, Brazil, Denmark, Japan, Norway, Russia Federation, South Africa and the United States of America. This data was taken from Kaggle. 
+## My analysis on factors that influence suicide dataset in Austria, Brazil, Denmark, Japan, Norway, Russia   Federation, South Africa and the United States of America. This data was taken from Kaggle.   
 
 First, I'll load the csv file:
 
@@ -15,7 +17,7 @@ file <- read_csv("C:/Sarah's Semicolon files/data-science/project-1/master.csv")
 file <- rename(file, `suicide (%)` = `suicides/100k pop`)
 ```
 
-### Then, I'll extract each country into it's own dataframe:
+### Then, I'll extract each country into it's own dataframe:  
 
 For Austria:
 
@@ -23,252 +25,468 @@ For Austria:
 au_df <- file%>%.[1787:2168, ]
 ```
 
-### For Brazil:
+For Brazil:
 
 ```{r}
 br_df <- file%>%.[4173:4544, ]
 ```
 
-### For Denmark:
+For Denmark:
 
 ```{r}
 denmark_df <- file%>%.[7419:7682, ]
 ```
 
-### For Japan:
+For Japan:
 
 ```{r}
 jp_df <- file%>%.[13365:13736, ]
 ```
 
-### For Norway:
+For Norway:
 
 ```{r}
 nw_df <- file%>%.[17869:18228, ]
 ```
 
-### For the Russia Federation:
+For the Russia Federation:
 
 ```{r}
 rs_df <- file%>%.[20937:21258, ]
 ```
 
-### For South Africa:
+For South Africa:
 
 ```{r}
 sa_df <- file%>%.[23289:23528, ]
 ```
 
-### For United States of America:
+For United States of America:
 
 ```{r}
 us_df <- file%>%.[26849:27220, ]
 ```
 
 
-### Next, I'll perform a chi-square test between the age and generation variables in all the countries.
+### Next, I'll perform a chi-square test between the age and generation variables in all the countries.  
 
-Null hypothesis (h0): There is no relationship between age and generation
-Alternative hypothesis (hA): The two variables are dependent on each other
+Null hypothesis (h_0): There is no relationship between age and generation  
+Alternative hypothesis (h_a): The two variables are dependent on each other
 
 
 For Austria:
 ```{r}
 chisq.test(au_df$age, au_df$generation)
 ```
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
-## For Brazil:
+For Brazil:
 
 ```{r}
 chisq.test(br_df$age, br_df$generation)
 ```
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
-## For Denmark:
+For Denmark:
 
 ```{r}
 chisq.test(denmark_df$age, denmark_df$generation)
 ```
 
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
-## For Japan:
+For Japan:
 
 ```{r}
 chisq.test(jp_df$age, jp_df$generation)
 ```
 
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
-## For Norway:
+For Norway:
 
 ```{r}
 chisq.test(nw_df$age, nw_df$generation)
 ```
 
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
-## For Russia:
+For Russia:
 
 ```{r}
 chisq.test(rs_df$age, rs_df$generation)
 ```
 
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
-## For South Africa:
+For South Africa:
 
 ```{r}
 chisq.test(sa_df$age, sa_df$generation)
 ```
 
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
-## For United States of America: 
+For United States of America: 
 
 ```{r}
 chisq.test(us_df$age, us_df$generation)
 ```
 
-### Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
+### Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
 
 ### Our chi-square analysis of age and generation are the same in all countries, so it's safe to conclude that we can use either variable but not both for other analysis
 
-```{r}
 
+
+
+
+### Next, I'll perform a chi-square test between the age and sex variables in all the countries.
+
+### Null hypothesis (h_0): There is no relationship between age and generation  
+### Alternative hypothesis (h_a): The two variables are dependent on each other
+
+
+For Austria:
+```{r}
+chisq.test(au_df$age, au_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
 
+
+
+For Brazil:
 ```{r}
+chisq.test(br_df$age, br_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
 
+
+
+For Denmark:
 ```{r}
+chisq.test(denmark_df$age, denmark_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
 
+
+
+For Japan:
 ```{r}
+chisq.test(jp_df$age, jp_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
 
+
+
+For Norway:
 ```{r}
+chisq.test(nw_df$age, nw_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
+
+
+
+For Russia:
 
 ```{r}
+chisq.test(rs_df$age, rs_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
 
+
+
+For South Africa:
 ```{r}
+chisq.test(sa_df$age, sa_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
 
+
+
+For United States of America:
 ```{r}
+chisq.test(us_df$age, us_df$sex)
 ```
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
+
+
+Therefore, we can safely use both categorical variables in any other analysis
+
+
+
+# ANOVA tests
+
+One-way ANOVA tests between The suicide percentage and age, and the suicide percentage and sex 
+
+Null hypothesis (h_0): There is no difference between the group means of the independent and residual variables  
+Alternative hypothesis (h_a): The is a difference in group means
+
+For Austria:  
+
+Suicide (%) and Age
 
 ```{r}
+one_way_au <- aov(`suicide (%)`~ age, data = au_df)
+summary(one_way_au)
 ```
+Independent variables being tested in the model (‘age’) and the model residuals (‘Residuals’).  
+
+The rest of the values in the output table describe the independent variable and the residuals:  
+
+The Df column displays the degrees of freedom  
+For the independent variable, Df = 5  
+For the residuals, Df = 376  
+
+The F-value column is the test statistic from the F test. This is the mean square of each independent variable divided by the mean square of the residuals. The larger the F value, the more likely it is that the variation caused by the independent variable is real and not due to chance.  
+
+The Pr(>F) column is the p-value of the F-statistic. This shows how likely it is that the F-value calculated from the test would have occurred if the null hypothesis of no difference among group means were true.
+The p-value of the age variable is low (p < 0.001), so it appears that the age groups have an impact on the suicide percentage of Austria.  
+
+
+Suicide (%) and Sex
 
 ```{r}
+one_way_au_1 <- aov(`suicide (%)`~ sex, data = au_df)
+summary(one_way_au_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 380    
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a significance on the suicide percentage of Austria.  
+
+
+
+For Brazil:  
+Suicide (%) and Age
 
 ```{r}
+one_way_br <- aov(`suicide (%)`~ age, data = br_df)
+summary(one_way_br)
 ```
+For the independent variable, Df = 5  
+For the residuals, Df = 366    
+
+
+The p-value of the age variable is low (p < 0.001), so it appears that the age groups have a high significance on the suicide percentage of Brazil.  
+
+Suicide (%) and Sex
 
 ```{r}
+one_way_br_1 <- aov(`suicide (%)`~ sex, data = br_df)
+summary(one_way_br_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 370    
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a high significance on the suicide percentage of Brazil. 
+
+
+
+For Denmark:  
+Suicide (%) and Age
 
 ```{r}
+one_way_dm <- aov(`suicide (%)`~ age, data = denmark_df)
+summary(one_way_dm)
 ```
+For the independent variable, Df = 5  
+For the residuals, Df = 366    
 
+
+The p-value of the age variable is low (p < 0.001), so it appears that the age groups have a high significance on the suicide percentage of Denmark. 
+
+
+Suicide (%) and Sex
 ```{r}
+one_way_dm_1 <- aov(`suicide (%)`~ sex, data = denmark_df)
+summary(one_way_dm_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 262   
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a high significance on the suicide percentage of Denmark. 
+
+
+For Japan:  
+Suicide (%) and Age
 
 ```{r}
+one_way_jp <- aov(`suicide (%)`~ age, data = jp_df)
+summary(one_way_jp)
 ```
+For the independent variable, Df = 5  
+For the residuals, Df = 366    
 
+
+The p-value of the age variable is low (p < 0.001), so it appears that the age groups have a high significance on the suicide percentage of Japan.  
+
+
+Suicide (%) and Sex
 ```{r}
+one_way_jp_1 <- aov(`suicide (%)`~ sex, data = jp_df)
+summary(one_way_jp_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 370   
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a high significance on the suicide percentage of Japan. 
+
+
+For Norway:
+Suicide (%) and Age
 
 ```{r}
+one_way_nw <- aov(`suicide (%)`~ age, data = nw_df)
+summary(one_way_nw)
 ```
+For the independent variable, Df = 5  
+For the residuals, Df = 354   
+
+
+The p-value of the age variable is low (p < 0.001), so it appears that the age group have a high significance on the suicide percentage of Norway.
+
+
+Suicide (%) and Sex
 
 ```{r}
+one_way_nw_1 <- aov(`suicide (%)`~ sex, data = nw_df)
+summary(one_way_nw_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 358   
 
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a high significance on the suicide percentage of Norway.
+
+
+For Russian Federation:
+Suicide (%) and Age
 ```{r}
+one_way_rs <- aov(`suicide (%)`~ age, data = rs_df)
+summary(one_way_rs)
 ```
+For the independent variable, Df = 5  
+For the residuals, Df = 316  
 
+
+The p-value of the age variable is low (p < 0.001), so it appears that the age groups have a high significance on the suicide percentage of the Russian Federation.  
+
+
+Suicide (%) and Sex
 ```{r}
+one_way_rs_1 <- aov(`suicide (%)`~ sex, data = rs_df)
+summary(one_way_rs_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 320 
 
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a high significance on the suicide percentage of the Russian Federation.  
+
+
+For South Africa:
+Suicide (%) and Age
 ```{r}
+one_way_sa <- aov(`suicide (%)`~ age, data = sa_df)
+summary(one_way_sa)
 ```
+For the independent variable, Df = 5   
+For the residuals, Df = 234 
 
+
+The p-value of the age variable is low (p < 0.001), so it appears that the age groups have a high significance on the suicide percentage of South Africa.  
+
+
+Suicide(%) and Sex
 ```{r}
+one_way_sa_1 <- aov(`suicide (%)`~ sex, data = sa_df)
+summary(one_way_sa_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 238
 
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a high significance on the suicide percentage of South Africa. 
+
+
+For United States of America:  
+Suicide (%) and Age
 ```{r}
+one_way_us <- aov(`suicide (%)`~ age, data = us_df)
+summary(one_way_us)
 ```
+For the independent variable, Df = 5 
+For the residuals, Df = 366
 
+
+The p-value of the age variable is low (p < 0.001), so it appears that the age groups have a high significance on the suicide percentage of United States of America.  
+
+
+Suicide (%) and Sex
 ```{r}
+one_way_us_1 <- aov(`suicide (%)`~ sex, data = us_df)
+summary(one_way_us_1)
 ```
+For the independent variable, Df = 1  
+For the residuals, Df = 370
 
+
+The p-value of the sex variable is low (p < 0.001), so it appears that the sexes have a high significance on the suicide percentage of United States of America.  
+
+
+
+## Two-way ANOVA tests with Age and Sex as the independent variables
+
+For Austria:
 ```{r}
+two_way_au <- aov(`suicide (%)`~ sex + age, data = au_df)
+summary(two_way_au)
 ```
-
+For Brazil:
 ```{r}
+two_way_br <- aov(`suicide (%)`~ sex + age, data = br_df)
+summary(two_way_br)
 ```
-
+For Denmark:  
 ```{r}
+two_way_dm <- aov(`suicide (%)`~ sex + age, data = denmark_df)
+summary(two_way_dm)
 ```
-
+For Japan:  
 ```{r}
+two_way_jp <- aov(`suicide (%)`~ sex + age, data = jp_df)
+summary(two_way_jp)
 ```
-
+For Norway: 
 ```{r}
+two_way_nw <- aov(`suicide (%)`~ sex + age, data = nw_df)
+summary(two_way_nw)
 ```
-
+For the Russian Federation:  
 ```{r}
+two_way_rs <- aov(`suicide (%)`~ sex + age, data = rs_df)
+summary(two_way_rs)
 ```
-
+For South Africa:  
 ```{r}
+two_way_sa <- aov(`suicide (%)`~ sex + age, data = sa_df)
+summary(two_way_sa)
 ```
-
+For United States of America:  
 ```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
+two_way_us <- aov(`suicide (%)`~ sex + age, data = us_df)
+summary(two_way_us)
 ```

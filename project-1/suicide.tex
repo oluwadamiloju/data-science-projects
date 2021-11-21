@@ -1,0 +1,709 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{Factors that possibly influence suicide}
+\author{Sarah Akinkunmi}
+\date{11/20/2021}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Factors that possibly influence suicide},
+  pdfauthor={Sarah Akinkunmi},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\hypertarget{my-analysis-on-factors-that-influence-suicide-dataset-in-austria-brazil-denmark-japan-norway-russia-federation-south-africa-and-the-united-states-of-america.-this-data-was-taken-from-kaggle.}{%
+\subsection{My analysis on factors that influence suicide dataset in
+Austria, Brazil, Denmark, Japan, Norway, Russia Federation, South Africa
+and the United States of America. This data was taken from
+Kaggle.}\label{my-analysis-on-factors-that-influence-suicide-dataset-in-austria-brazil-denmark-japan-norway-russia-federation-south-africa-and-the-united-states-of-america.-this-data-was-taken-from-kaggle.}}
+
+First, I'll load the csv file:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   2.1.0     v forcats 0.5.1
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{file }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"C:/Sarah\textquotesingle{}s Semicolon files/data{-}science/project{-}1/master.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 27820 Columns: 12
+\end{verbatim}
+
+\begin{verbatim}
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (5): country, sex, age, country-year, generation
+## dbl (6): year, suicides_no, population, suicides/100k pop, HDI for year, gdp...
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{file }\OtherTok{\textless{}{-}} \FunctionTok{rename}\NormalTok{(file, }\StringTok{\textasciigrave{}}\AttributeTok{suicide (\%)}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{\textasciigrave{}}\AttributeTok{suicides/100k pop}\StringTok{\textasciigrave{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{then-ill-extract-each-country-into-its-own-dataframe}{%
+\subsubsection{Then, I'll extract each country into it's own
+dataframe:}\label{then-ill-extract-each-country-into-its-own-dataframe}}
+
+For Austria:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{au\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{1787}\SpecialCharTok{:}\DecValTok{2168}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{for-brazil}{%
+\subsubsection{For Brazil:}\label{for-brazil}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{br\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{4173}\SpecialCharTok{:}\DecValTok{4544}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{for-denmark}{%
+\subsubsection{For Denmark:}\label{for-denmark}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{denmark\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{7419}\SpecialCharTok{:}\DecValTok{7682}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{for-japan}{%
+\subsubsection{For Japan:}\label{for-japan}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{jp\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{13365}\SpecialCharTok{:}\DecValTok{13736}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{for-norway}{%
+\subsubsection{For Norway:}\label{for-norway}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{nw\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{17869}\SpecialCharTok{:}\DecValTok{18228}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{for-the-russia-federation}{%
+\subsubsection{For the Russia
+Federation:}\label{for-the-russia-federation}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rs\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{20937}\SpecialCharTok{:}\DecValTok{21258}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{for-south-africa}{%
+\subsubsection{For South Africa:}\label{for-south-africa}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sa\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{23289}\SpecialCharTok{:}\DecValTok{23528}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{for-united-states-of-america}{%
+\subsubsection{For United States of
+America:}\label{for-united-states-of-america}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{us\_df }\OtherTok{\textless{}{-}}\NormalTok{ file}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{.[}\DecValTok{26849}\SpecialCharTok{:}\DecValTok{27220}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{next-ill-perform-a-chi-square-test-between-the-age-and-generation-variables-in-all-the-countries.}{%
+\subsubsection{Next, I'll perform a chi-square test between the age and
+generation variables in all the
+countries.}\label{next-ill-perform-a-chi-square-test-between-the-age-and-generation-variables-in-all-the-countries.}}
+
+Null hypothesis (h\textsuperscript{0}): There is no relationship between
+age and generation Alternative hypothesis (h\textsuperscript{a}): The
+two variables are dependent on each other
+
+For Austria:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(au\_df}\SpecialCharTok{$}\NormalTok{age, au\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(au_df$age, au_df$generation): Chi-squared approximation
+## may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  au_df$age and au_df$generation
+## X-squared = 586.97, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other}}
+
+\hypertarget{for-brazil-1}{%
+\subsection{For Brazil:}\label{for-brazil-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(br\_df}\SpecialCharTok{$}\NormalTok{age, br\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(br_df$age, br_df$generation): Chi-squared approximation
+## may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  br_df$age and br_df$generation
+## X-squared = 588.2, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-1}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-1}}
+
+\hypertarget{for-denmark-1}{%
+\subsection{For Denmark:}\label{for-denmark-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(denmark\_df}\SpecialCharTok{$}\NormalTok{age, denmark\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(denmark_df$age, denmark_df$generation): Chi-squared
+## approximation may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  denmark_df$age and denmark_df$generation
+## X-squared = 568.04, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-2}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-2}}
+
+\hypertarget{for-japan-1}{%
+\subsection{For Japan:}\label{for-japan-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(jp\_df}\SpecialCharTok{$}\NormalTok{age, jp\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(jp_df$age, jp_df$generation): Chi-squared approximation
+## may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  jp_df$age and jp_df$generation
+## X-squared = 588.2, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-3}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-3}}
+
+\hypertarget{for-norway-1}{%
+\subsection{For Norway:}\label{for-norway-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(nw\_df}\SpecialCharTok{$}\NormalTok{age, nw\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(nw_df$age, nw_df$generation): Chi-squared approximation
+## may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  nw_df$age and nw_df$generation
+## X-squared = 586.34, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-4}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-4}}
+
+\hypertarget{for-russia}{%
+\subsection{For Russia:}\label{for-russia}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(rs\_df}\SpecialCharTok{$}\NormalTok{age, rs\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(rs_df$age, rs_df$generation): Chi-squared approximation
+## may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  rs_df$age and rs_df$generation
+## X-squared = 590.35, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-5}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-5}}
+
+\hypertarget{for-south-africa-1}{%
+\subsection{For South Africa:}\label{for-south-africa-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(sa\_df}\SpecialCharTok{$}\NormalTok{age, sa\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(sa_df$age, sa_df$generation): Chi-squared approximation
+## may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  sa_df$age and sa_df$generation
+## X-squared = 523.19, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-6}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-6}}
+
+\hypertarget{for-united-states-of-america-1}{%
+\subsection{For United States of
+America:}\label{for-united-states-of-america-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(us\_df}\SpecialCharTok{$}\NormalTok{age, us\_df}\SpecialCharTok{$}\NormalTok{generation)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(us_df$age, us_df$generation): Chi-squared approximation
+## may be incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  us_df$age and us_df$generation
+## X-squared = 588.2, df = 25, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-7}{%
+\subsubsection{\texorpdfstring{Since the p-value is less than 0.05
+(2.2e\textsuperscript{-16}), we will reject the null hypothesis. We can
+conclude that the age and generation depend on each
+other}{Since the p-value is less than 0.05 (2.2e-16), we will reject the null hypothesis. We can conclude that the age and generation depend on each other}}\label{since-the-p-value-is-less-than-0.05-2.2e-16-we-will-reject-the-null-hypothesis.-we-can-conclude-that-the-age-and-generation-depend-on-each-other-7}}
+
+\hypertarget{our-chi-square-analysis-of-age-and-generation-are-the-same-in-all-countries-so-its-safe-to-conclude-that-we-can-use-either-variable-but-not-both-for-other-analysis}{%
+\subsubsection{Our chi-square analysis of age and generation are the
+same in all countries, so it's safe to conclude that we can use either
+variable but not both for other
+analysis}\label{our-chi-square-analysis-of-age-and-generation-are-the-same-in-all-countries-so-its-safe-to-conclude-that-we-can-use-either-variable-but-not-both-for-other-analysis}}
+
+\hypertarget{next-ill-perform-a-chi-square-test-between-the-age-and-sex-variables-in-all-the-countries.}{%
+\subsubsection{Next, I'll perform a chi-square test between the age and
+sex variables in all the
+countries.}\label{next-ill-perform-a-chi-square-test-between-the-age-and-sex-variables-in-all-the-countries.}}
+
+Null hypothesis (h\textsuperscript{0}): There is no relationship between
+age and generation Alternative hypothesis (h\textsuperscript{A}): The
+two variables are dependent on each other
+
+\hypertarget{for-austria}{%
+\subsection{For Austria:}\label{for-austria}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(au\_df}\SpecialCharTok{$}\NormalTok{age, au\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  au_df$age and au_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+\hypertarget{for-brazil-2}{%
+\subsection{For Brazil:}\label{for-brazil-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(br\_df}\SpecialCharTok{$}\NormalTok{age, br\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  br_df$age and br_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+\hypertarget{for-denmark-2}{%
+\subsection{For Denmark:}\label{for-denmark-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(denmark\_df}\SpecialCharTok{$}\NormalTok{age, denmark\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  denmark_df$age and denmark_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+\hypertarget{for-japan-2}{%
+\subsection{For Japan:}\label{for-japan-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(jp\_df}\SpecialCharTok{$}\NormalTok{age, jp\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  jp_df$age and jp_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+\hypertarget{for-norway-2}{%
+\subsection{For Norway:}\label{for-norway-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(nw\_df}\SpecialCharTok{$}\NormalTok{age, nw\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  nw_df$age and nw_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+\hypertarget{for-russia-1}{%
+\subsection{For Russia:}\label{for-russia-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(rs\_df}\SpecialCharTok{$}\NormalTok{age, rs\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  rs_df$age and rs_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+\hypertarget{for-south-africa-2}{%
+\subsection{For South Africa:}\label{for-south-africa-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(sa\_df}\SpecialCharTok{$}\NormalTok{age, sa\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  sa_df$age and sa_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+\hypertarget{for-united-states-of-america-2}{%
+\subsection{For United States of
+America:}\label{for-united-states-of-america-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chisq.test}\NormalTok{(us\_df}\SpecialCharTok{$}\NormalTok{age, us\_df}\SpecialCharTok{$}\NormalTok{sex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  us_df$age and us_df$sex
+## X-squared = 0, df = 5, p-value = 1
+\end{verbatim}
+
+Since our p-value is greater than 0.05 (1), we fail to reject the null
+hypothesis and we conclude that both variables are independent
+
+Therefore, we can safely use both categorical variables in any other
+analysis
+
+\hypertarget{anova-tests}{%
+\section{ANOVA tests}\label{anova-tests}}
+
+One-way ANOVA tests between Suicide \% and age For Austria:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{one\_way\_au }\OtherTok{\textless{}{-}} \FunctionTok{aov}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{suicide (\%)}\StringTok{\textasciigrave{}}\SpecialCharTok{\textasciitilde{}}\NormalTok{ age, }\AttributeTok{data =}\NormalTok{ au\_df)}
+\FunctionTok{summary}\NormalTok{(one\_way\_au)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##              Df Sum Sq Mean Sq F value Pr(>F)    
+## age           5 132286   26457    69.8 <2e-16 ***
+## Residuals   376 142524     379                   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+The model summary first lists the independent variables being tested in
+the model (in this case we have only one, `fertilizer') and the model
+residuals (`Residual'). All of the variation that is not explained by
+the independent variables is called residual variance.
+
+The rest of the values in the output table describe the independent
+variable and the residuals:
+
+The Df column displays the degrees of freedom for the independent
+variable (the number of levels in the variable minus 1), and the degrees
+of freedom for the residuals (the total number of observations minus one
+and minus the number of levels in the independent variables). The Sum Sq
+column displays the sum of squares (a.k.a. the total variation between
+the group means and the overall mean). The Mean Sq column is the mean of
+the sum of squares, calculated by dividing the sum of squares by the
+degrees of freedom for each parameter. The F-value column is the test
+statistic from the F test. This is the mean square of each independent
+variable divided by the mean square of the residuals. The larger the F
+value, the more likely it is that the variation caused by the
+independent variable is real and not due to chance. The
+Pr(\textgreater F) column is the p-value of the F-statistic. This shows
+how likely it is that the F-value calculated from the test would have
+occurred if the null hypothesis of no difference among group means were
+true. The p-value of the fertilizer variable is low (p \textless{}
+0.001), so it appears that the type of fertilizer used has a real impact
+on the final crop yield.
+
+\end{document}
