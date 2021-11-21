@@ -3,4 +3,4 @@
 This repo contains some data science and analysis projects.
 
 ## projects
-- [Factors that influence suicide]()
+- [Factors that influence suicide](https://github.com/oluwadamiloju/data-science-projects/project-1)
