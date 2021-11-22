@@ -461,38 +461,86 @@ For Austria:
 two_way_au <- aov(`suicide (%)`~ sex + age, data = au_df)
 summary(two_way_au)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age
+For the residuals, Df = 375
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.
+
 For Brazil:
 ```{r}
 two_way_br <- aov(`suicide (%)`~ sex + age, data = br_df)
 summary(two_way_br)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age
+For the residuals, Df = 365
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.  
+  
+  
 For Denmark:  
 ```{r}
 two_way_dm <- aov(`suicide (%)`~ sex + age, data = denmark_df)
 summary(two_way_dm)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age
+For the residuals, Df = 257  
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.  
+  
 For Japan:  
 ```{r}
 two_way_jp <- aov(`suicide (%)`~ sex + age, data = jp_df)
 summary(two_way_jp)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age  
+For the residuals, Df = 365  
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.  
+
 For Norway: 
 ```{r}
 two_way_nw <- aov(`suicide (%)`~ sex + age, data = nw_df)
 summary(two_way_nw)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age
+For the residuals, Df = 353  
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.
+
 For the Russian Federation:  
 ```{r}
 two_way_rs <- aov(`suicide (%)`~ sex + age, data = rs_df)
 summary(two_way_rs)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age  
+For the residuals, Df = 315  
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.  
+
 For South Africa:  
 ```{r}
 two_way_sa <- aov(`suicide (%)`~ sex + age, data = sa_df)
 summary(two_way_sa)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age  
+For the residuals, Df = 233  
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.  
+
 For United States:  
 ```{r}
 two_way_us <- aov(`suicide (%)`~ sex + age, data = us_df)
 summary(two_way_us)
 ```
+For the independent variables, Df = 1 for sex and Df = 5 for age  
+For the residuals, Df = 365  
+
+
+The p-value of the sex variable is low (p < 0.001), so it appears that both the age groups and the sexes have a high significance on the suicide percentage of United States. Comparing this to our one-way ANOVA analyses, our sum square is lower. Hence, we can say our two-way analysis is a better model.
