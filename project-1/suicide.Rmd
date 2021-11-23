@@ -22,49 +22,49 @@ file <- rename(file, `suicide (%)` = `suicides/100k pop`)
 For Austria:
 
 ```{r}
-au_df <- file%>%.[1787:2168, ]
+au_df <- file%>%filter(country == "Austria")
 ```
 
 For Brazil:
 
 ```{r}
-br_df <- file%>%.[4173:4544, ]
+br_df <- file%>%filter(country == "Brazil")
 ```
 
 For Denmark:
 
 ```{r}
-denmark_df <- file%>%.[7419:7682, ]
+denmark_df <- file%>%filter(country == "Denmark")
 ```
 
 For Japan:
 
 ```{r}
-jp_df <- file%>%.[13365:13736, ]
+jp_df <- file%>%filter(country == "Japan")
 ```
 
 For Norway:
 
 ```{r}
-nw_df <- file%>%.[17869:18228, ]
+nw_df <- file%>%filter(country == "Norway")
 ```
 
 For the Russian Federation:
 
 ```{r}
-rs_df <- file%>%.[20937:21258, ]
+rs_df <- file%>%filter(country == "Russian Federation")
 ```
 
 For South Africa:
 
 ```{r}
-sa_df <- file%>%.[23289:23528, ]
+sa_df <- file%>%filter(country == "South Africa")
 ```
 
 For United States:
 
 ```{r}
-us_df <- file%>%.[26849:27220, ]
+us_df <- file%>%filter(country == "United States")
 ```
 
 
@@ -167,7 +167,7 @@ For Austria:
 ```{r}
 chisq.test(au_df$age, au_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent  
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model
   
   
   
