@@ -167,7 +167,7 @@ For Austria:
 ```{r}
 chisq.test(au_df$age, au_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
   
   
@@ -175,7 +175,7 @@ For Brazil:
 ```{r}
 chisq.test(br_df$age, br_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
   
   
@@ -183,7 +183,7 @@ For Denmark:
 ```{r}
 chisq.test(denmark_df$age, denmark_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent  
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
   
   
@@ -191,7 +191,7 @@ For Japan:
 ```{r}
 chisq.test(jp_df$age, jp_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent  
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
   
   
@@ -199,7 +199,7 @@ For Norway:
 ```{r}
 chisq.test(nw_df$age, nw_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent  
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
   
   
@@ -207,7 +207,7 @@ For the Russian Federation:
 ```{r}
 chisq.test(rs_df$age, rs_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent  
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
   
   
@@ -215,7 +215,7 @@ For South Africa:
 ```{r}
 chisq.test(sa_df$age, sa_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent  
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
   
   
@@ -223,10 +223,9 @@ For United States:
 ```{r}
 chisq.test(us_df$age, us_df$sex)
 ```
-Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we conclude that both variables are independent  
+Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
-  
-Therefore, we can safely use both categorical variables in any other analysis  
+   
 
 
 
@@ -254,7 +253,8 @@ For the residuals, Df = 376
 
 The F-value column is the test statistic from the F test. This is the mean square of each independent variable divided by the mean square of the residuals. The larger the F value, the more likely it is that the variation caused by the independent variable is real and not due to chance.   
 
-The Pr(>F) column is the p-value of the F-statistic. This shows how likely it is that the F-value calculated from the test would have occurred if the null hypothesis of no difference among group means were true.
+The Pr(>F) column is the p-value of the F-statistic. This shows how likely it is that the F-value calculated from the test would have occurred if the null hypothesis of no difference among group means were true.  
+
 The p-value of the age variable is low (p < 0.001), so it appears that the age groups have an impact on the suicide percentage of Austria.  
 
 
