@@ -23,48 +23,74 @@ For Austria:
 
 ```{r}
 au_df <- file%>%filter(country == "Austria")
+as.factor(au_df$age)
+as.factor(au_df$generation)
+as.factor(au_df$sex)
+au_df
 ```
 
 For Brazil:
 
 ```{r}
 br_df <- file%>%filter(country == "Brazil")
+as.factor(br_df$age)
+as.factor(br_df$generation)
+as.factor(br_df$sex)
+br_df
 ```
 
 For Denmark:
 
 ```{r}
 denmark_df <- file%>%filter(country == "Denmark")
+as.factor(denmark_df$age)
+as.factor(denmark_df$generation)
+as.factor(denmark_df$sex)
 ```
 
 For Japan:
 
 ```{r}
 jp_df <- file%>%filter(country == "Japan")
+as.factor(jp_df$age)
+as.factor(jp_df$generation)
+as.factor(jp_df$sex)
 ```
 
 For Norway:
 
 ```{r}
 nw_df <- file%>%filter(country == "Norway")
+as.factor(nw_df$age)
+as.factor(nw_df$generation)
+as.factor(nw_df$sex)
 ```
 
 For the Russian Federation:
 
 ```{r}
 rs_df <- file%>%filter(country == "Russian Federation")
+as.factor(rs_df$age)
+as.factor(rs_df$generation)
+as.factor(rs_df$sex)
 ```
 
 For South Africa:
 
 ```{r}
 sa_df <- file%>%filter(country == "South Africa")
+as.factor(sa_df$age)
+as.factor(sa_df$generation)
+as.factor(sa_df$sex)
 ```
 
 For United States:
 
 ```{r}
 us_df <- file%>%filter(country == "United States")
+as.factor(us_df$age)
+as.factor(us_df$generation)
+as.factor(us_df$sex)
 ```
 
 
@@ -80,7 +106,6 @@ chisq.test(au_df$age, au_df$generation)
 ```
 Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other
 
-  
 
 For Brazil:
 
@@ -90,7 +115,6 @@ chisq.test(br_df$age, br_df$generation)
 Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other  
 
   
-  
 For Denmark:
 
 ```{r}
@@ -98,8 +122,6 @@ chisq.test(denmark_df$age, denmark_df$generation)
 ```
 Since the p-value is less than 0.05 (2.2e^-16^), we will reject the null hypothesis. We can conclude that the age and generation depend on each other  
 
-
-  
 
 For Japan:
 
@@ -174,6 +196,7 @@ Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesi
 For Brazil:
 ```{r}
 chisq.test(br_df$age, br_df$sex)
+
 ```
 Since our p-value is greater than 0.05 (1), we fail to reject the null hypothesis and we reject the model because it has a 100% failure rate.  
   
